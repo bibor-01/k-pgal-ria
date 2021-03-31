@@ -7,7 +7,7 @@ function $(nev) {
 
 //var kepek = [];
 //var kepCimek = [];
-var index =0;
+var index = 0;
 
 var kep1 = {
     eleresiut: "kepek/1.jpg",
@@ -67,18 +67,20 @@ function kepCsere() {
     $("#nagykepTarolo p")[0].innerHTML = kepTomb[i].leiras;
 }
 function balLapoz(){
-    $("#nagykepTarolo img")[0].src = kepTomb[index].eleresiut;
     index--;
     if(index<0){
-        index=kepTomb.lenght-1;
-    }
+        index=kepTomb.length-1;
+    }    
+    $("#nagykepTarolo img")[0].src = kepTomb[index].eleresiut;
+
 }
 
 function jobbLapoz(){
-    $("#nagykepTarolo img")[0].src = kepTomb[index].eleresiut;
     index++;
-    if(index>kepTomb.lenght-1){
-         index=0;
+    if(index >= kepTomb.length){
+         index = 0;   
+
     }
-       
+        $("#nagykepTarolo img")[0].src = kepTomb[index].eleresiut;
+   
 }
